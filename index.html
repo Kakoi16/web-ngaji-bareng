@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Parallax Landing Page</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* Efek underline pada hover link navbar */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #0d9488; /* teal-600 */
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center">
+                <a href="#home" class="flex items-center gap-2 text-2xl font-bold text-white transition-colors duration-300" id="logo-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-white transition-colors duration-300" id="logo-icon"><path d="M12 2.016c-5.523 0-10 4.477-10 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"/><path d="M12 4.016c-4.418 0-8 3.582-8 8s3.582 8 8 8c1.397 0 2.716-.363 3.86-1.012-3.097-1.745-4.86-5.118-4.86-8.988s1.763-7.243 4.86-8.988c-1.144-.649-2.463-1.012-3.86-1.012z"/></svg>
+                    <span>Cahaya Islami</span>
+                </a>
+
+                <ul class="hidden md:flex items-center space-x-8 text-white transition-colors duration-300" id="desktop-menu-links">
+                    <li><a href="#home" class="relative nav-link">Beranda</a></li>
+                    <li><a href="#about" class="relative nav-link">Tentang</a></li>
+                    <li><a href="#pillars" class="relative nav-link">Rukun Islam</a></li>
+                    <li><a href="#contact" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-2 rounded-full transition-all duration-300">Al-Qur'an dan Hadist</a></li>
+                </ul>
+
+                <button id="hamburger-btn" class="md:hidden text-white focus:outline-none transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-lg">
+            <a href="#home" class="block py-3 px-6 text-gray-700 hover:bg-teal-50">Beranda</a>
+            <a href="#about" class="block py-3 px-6 text-gray-700 hover:bg-teal-50">Tentang</a>
+            <a href="#pillars" class="block py-3 px-6 text-gray-700 hover:bg-teal-50">Rukun Islam</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-700 hover:bg-teal-50">Al-Qur'an dan Hadist</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" 
+                 class="h-screen w-full flex items-center justify-center text-white parallax-bg" 
+                 style="background-image: url('https://static.vecteezy.com/system/resources/previews/020/092/547/original/blue-islamic-banner-background-template-vector.jpg');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="text-center z-10 p-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">Menemukan Kedamaian dalam Iman</h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto">Jelajahi keindahan dan kearifan Islam yang membawa ketenangan jiwa dan pencerahan hati.</p>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-teal-800 mb-6">Islam: Agama Rahmatan lil 'Alamin</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                    Islam bukan hanya sekedar rangkaian ibadah, tetapi sebuah panduan hidup lengkap yang mengajarkan kasih sayang, keadilan, dan keseimbangan. Ia adalah rahmat bagi seluruh alam, membawa pesan perdamaian bagi seluruh umat manusia.
+                </p>
+            </div>
+        </section>
+
+        <section id="pillars" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-teal-800 mb-12">Lima Pilar Penegak Iman</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="font-bold text-xl text-teal-700 mb-2">Syahadat</h3>
+                        <p class="text-gray-600 text-sm">Kesaksian tiada Tuhan selain Allah dan Muhammad adalah utusan-Nya.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="font-bold text-xl text-teal-700 mb-2">Shalat</h3>
+                        <p class="text-gray-600 text-sm">Mendirikan shalat lima waktu sebagai tiang agama dan komunikasi dengan Sang Pencipta.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="font-bold text-xl text-teal-700 mb-2">Zakat</h3>
+                        <p class="text-gray-600 text-sm">Menyucikan harta dengan berbagi kepada mereka yang membutuhkan.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="font-bold text-xl text-teal-700 mb-2">Puasa</h3>
+                        <p class="text-gray-600 text-sm">Menahan diri di bulan Ramadhan untuk meningkatkan takwa dan empati.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="font-bold text-xl text-teal-700 mb-2">Haji</h3>
+                        <p class="text-gray-600 text-sm">Menunaikan ibadah haji ke Baitullah bagi yang mampu sebagai penyempurna iman.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-[50vh] w-full flex items-center justify-center text-white parallax-bg" 
+                 style="background-image: url('https://static.vecteezy.com/system/resources/previews/007/005/555/original/blue-light-islamic-arabesque-background-design-template-free-vector.jpg');">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="text-center z-10 p-6 max-w-4xl mx-auto">
+                <blockquote class="text-2xl md:text-4xl italic font-light">
+                    "Dan barangsiapa bertakwa kepada Allah, niscaya Dia akan membukakan jalan keluar baginya. Dan Dia memberinya rezeki dari arah yang tidak disangka-sangkanya."
+                </blockquote>
+                <cite class="block mt-4 text-lg not-italic font-semibold tracking-wider">QS. At-Talaq: 2-3</cite>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contact" class="bg-teal-900 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Cahaya Islami.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.getElementById('main-header');
+            const logoText = document.getElementById('logo-text');
+            const logoIcon = document.getElementById('logo-icon');
+            const desktopMenuLinks = document.getElementById('desktop-menu-links');
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // 1. Fungsi untuk mengubah tampilan header saat scroll
+            const handleScroll = () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-white/90', 'shadow-lg', 'backdrop-blur-lg');
+                    logoText.classList.remove('text-white');
+                    logoText.classList.add('text-teal-800');
+                    logoIcon.classList.remove('text-white');
+                    logoIcon.classList.add('text-teal-800');
+                    desktopMenuLinks.classList.remove('text-white');
+                    desktopMenuLinks.classList.add('text-gray-700');
+                    hamburgerBtn.classList.remove('text-white');
+                    hamburgerBtn.classList.add('text-gray-700');
+                } else {
+                    header.classList.remove('bg-white/90', 'shadow-lg', 'backdrop-blur-lg');
+                    logoText.classList.add('text-white');
+                    logoText.classList.remove('text-teal-800');
+                    logoIcon.classList.add('text-white');
+                    logoIcon.classList.remove('text-teal-800');
+                    desktopMenuLinks.classList.add('text-white');
+                    desktopMenuLinks.classList.remove('text-gray-700');
+                    hamburgerBtn.classList.add('text-white');
+                    hamburgerBtn.classList.remove('text-gray-700');
+                }
+            };
+
+            // 2. Fungsi untuk toggle menu mobile
+            const toggleMobileMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+            };
+
+            // Tambahkan event listener
+            window.addEventListener('scroll', handleScroll);
+            hamburgerBtn.addEventListener('click', toggleMobileMenu);
+
+            // Tambahkan event listener untuk setiap link di menu mobile agar menu tertutup setelah diklik
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', toggleMobileMenu);
+            });
+        });
+    </script>
+</body>
+</html>
